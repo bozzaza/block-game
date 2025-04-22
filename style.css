@@ -1,0 +1,129 @@
+html,
+body {
+  overflow: hidden;
+  height: 100%;
+  max-width: 400px;
+  width: 400px;
+  max-height: 600px;
+  height: 600px;
+}
+
+body {
+  background-color: burlywood;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+}
+
+#player {
+  width: 20px;
+  height: 20px;
+  background-color: lightgreen;
+  position: absolute;
+  outline: 2px solid;
+  z-index: 1;
+  border: 1px solid;
+}
+
+.wall {
+  background-color: rgb(51, 50, 50);
+  position: absolute;
+}
+
+h1 {
+  text-align: center;
+  font-family: "Comic Sans MS";
+  font-size: 60px;
+  color: violet;
+  -webkit-text-stroke: 3.5px black;
+  margin: 0;
+}
+
+h2 {
+  text-align: center;
+  font-family: "Comic Sans MS";
+  font-size: 32px;
+  color: violet;
+  -webkit-text-stroke: 2px black;
+  padding: 0;
+  margin: 0;
+}
+
+#bouncer {
+  width: 100px;
+  height: 100px;
+  background-color: hotpink;
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  z-index: 0;
+  border: 5px solid;
+}
+
+.projectile {
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  position: absolute;
+  top: 5;
+  z-index: 0;
+  border: 2px solid;
+}
+
+.spike {
+  position: absolute;
+  width: 30px;
+  height: 40px;
+  background-color: red;
+  border: 5px solid;
+}
+
+#gameOverScreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+#gameOverBox {
+  background-color: white;
+  border: 4px solid black;
+  border-radius: 16px;
+  padding: 20px;
+  text-align: center;
+  font-family: "Comic Sans MS";
+  color: red;
+  max-width: 300px;
+  max-height: 230px;
+  height: 230px;
+  position: absolute;
+  top: 185px;
+}
+
+#gameOverBox h1 {
+  font-size: 48px;
+}
+
+#gameOverBox h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+#gameOverBox button {
+  font-size: 24px;
+  padding: 10px 30px;
+  border: 2px solid black;
+  border-radius: 8px;
+  background-color: violet;
+  cursor: pointer;
+}

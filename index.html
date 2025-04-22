@@ -1,153 +1,41 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<head>
-    <style>
-        html,
-        body {
-            overflow: hidden;
-            height: 100%;
-            max-width: 400px;
-            width: 400px;
-            max-height: 600px;
-            height: 600px;
-        }
-        
-        body {
-            background-color: burlywood;
-            margin: 0;
-            padding: 0;
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            height: 100vh;
-            width: 100vw;
-        }
-        
-        #player {
-            width: 20px;
-            height: 20px;
-            background-color: lightgreen;
-            position: absolute;
-            outline: 2px solid;
-            z-index: 1;
-            border: 1px solid;
-        }
-        
-        .wall {
-            background-color: rgb(51, 50, 50);
-            position: absolute;
-        }
-        
-        h1 {
-            text-align: center;
-            font-family: "Comic Sans MS";
-            font-size: 60px;
-            color: violet;
-            -webkit-text-stroke: 3.5px black;
-            margin: 0;
-        }
-        
-        h2 {
-            text-align: center;
-            font-family: "Comic Sans MS";
-            font-size: 32px;
-            color: violet;
-            -webkit-text-stroke: 2px black;
-            padding: 0;
-            margin: 0;
-        }
-        
-        #bouncer {
-            width: 100px;
-            height: 100px;
-            background-color: hotpink;
-            position: absolute;
-            top: 100px;
-            left: 100px;
-            z-index: 0;
-            border: 5px solid;
-        }
-        
-        .projectile {
-            width: 20px;
-            height: 20px;
-            background-color: red;
-            position: absolute;
-            top: 0;
-            z-index: 0;
-            border: 2px solid;
-        }
-        
-        #gameOverScreen {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            background-color: rgba(0, 0, 0, 0.8);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 10;
-        }
-        
-        #gameOverBox {
-            background-color: white;
-            border: 4px solid black;
-            border-radius: 16px;
-            padding: 20px;
-            text-align: center;
-            font-family: "Comic Sans MS";
-            color: red;
-            max-width: 300px;
-            max-height: 230px;
-            height: 230px;
-            position: absolute;
-            top: 185px;
-        }
-        
-        #gameOverBox h1 {
-            font-size: 48px;
-        }
-        
-        #gameOverBox h2 {
-            font-size: 32px;
-            margin-bottom: 20px;
-        }
-        
-        #gameOverBox button {
-            font-size: 24px;
-            padding: 10px 30px;
-            border: 2px solid black;
-            border-radius: 8px;
-            background-color: violet;
-            cursor: pointer;
-        }
-    </style>
-</head>
-
-<body>
+  <body>
     <h1>block game</h1>
     <h2 id="timer">time alive: 0.0s</h2>
     <h2 id="bestTime">best time: 0.0s</h2>
 
     <div id="player"></div>
 
-    <div class="wall" style="width: 100vw; height: 20px; top: -15px; left: 0px"></div>
-    <div class="wall" style="width: 20px; height: 100vh; top: 0px; left: -15px"></div>
-    <div class="wall" style="width: 20px; height: 100vh; top: 0px; right: -15px"></div>
-    <div class="wall" style="width: 100vw; height: 20px; bottom: -15px; left: 0px"></div>
+    <div
+      class="wall"
+      style="width: 100vw; height: 20px; top: -15px; left: 0px"
+    ></div>
+    <div
+      class="wall"
+      style="width: 20px; height: 100vh; top: 0px; left: -15px"
+    ></div>
+    <div
+      class="wall"
+      style="width: 20px; height: 100vh; top: 0px; right: -15px"
+    ></div>
+    <div
+      class="wall"
+      style="width: 100vw; height: 20px; bottom: -15px; left: 0px"
+    ></div>
 
-    <div id="gameOverScreen" style="display: none;">
-        <div id="gameOverBox">
-            <h1>Game Over</h1>
-            <h2>You survived for <span id="finalTime">0.0</span> seconds</h2>
-            <button id="tryagainbutton">Try Again</button>
-        </div>
+    <div id="gameOverScreen" style="display: none">
+      <div id="gameOverBox">
+        <h1>Game Over</h1>
+        <h2>You survived for <span id="finalTime">0.0</span> seconds</h2>
+        <button id="tryagainbutton">Try Again</button>
+      </div>
     </div>
 
     <script src="script.js"></script>
-</body>
-
+  </body>
 </html>
